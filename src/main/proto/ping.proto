@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.example.rpc.services;
+
+option java_package="com.example.rpc.services";
+option java_multiple_files = true;
+
+service PingService{
+  rpc getPing(PingRequest) returns (PingResponse);
+}
+
+message PingRequest{
+  string message = 1;
+}
+
+message PingResponse{
+  string message = 1;
+}
